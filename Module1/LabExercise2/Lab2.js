@@ -35,6 +35,8 @@ divideNumber();
 let name= "Cherakye Lopez";
 
 function printName(){
-    console.log("Hello," + name+"!");
+    console.log("Hello," +name+"!");
 }
 printName();
+
+
