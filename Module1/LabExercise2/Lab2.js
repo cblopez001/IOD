@@ -32,11 +32,17 @@ function divideNumber(){
 divideNumber();
 
 //For this example, I defined a variable called name. When I called the function, I printed "Hello,<name>!".
-let name= "Cherakye Lopez";
+let name= "John Doe";
 
 function printName(){
     console.log("Hello," +name+"!");
 }
 printName();
 
+// The Console is reflecting he following output: 12,8,20,5,"Hello,John Doe!"
 
+//Alternatively, I can use the function greet() to print the following output: "Hello,Jane Doe!" by passing the parameter "Jane Doe" to the function.
+function greet(name){
+    console.log("Hello," +name+"!");
+}
+greet("Jane Doe");
