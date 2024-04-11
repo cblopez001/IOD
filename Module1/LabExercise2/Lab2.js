@@ -38,5 +38,4 @@ function printName(){
     console.log("Hello," + name+"!");
 }
 
-//I defined a function called printName. When I called the function, I printed "Hello,
 printName();
