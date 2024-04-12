@@ -32,10 +32,11 @@ function divideNumber(){
 divideNumber();
 
 //For this example, I defined a variable called name. When I called the function, I printed "Hello,<name>!".
-let name= "John Doe";
+const name= "John Doe";
 
 function printName(){
-    console.log("Hello," +name+"!");
+
+console.log("Hello,"+name+"!")
 }
 printName();
 
