@@ -15,7 +15,7 @@
 <body>
     <h1>My Software Dev Journey</h1>
     <article>
-        <h2>Learning HTML Structures</h2>
+        <h2>HTML Elements Practice</h2>
         <div>HTML</div>
         <div>CSS</div>
         <div>JAVASCRIPT</div>
@@ -46,7 +46,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>First Header</th>
+                    <th colspan="2">First Header</th>
                     <th>Second Header</th>
                 </tr>
             </thead>
@@ -54,13 +54,32 @@
                 <tr>
                     <td>First Cell- first row</td>
                     <td>Second Cell- first row</td>
+                    <td>Third Cell- first row</td>
                 </tr>
                 <tr>
-                    <td>Third Cell- second row</td>
-                    <td>Fourth Cell- second row</td>
+                    <td>New Row- second row</td>
+                    <td>New Row- second row</td>
+                    <td rowspan="2">New Row- second row</td>
+                </tr>
+                <tr>
+                    <td>New Row- third row</td>
+                    <td>New Row- third row</td>
                 </tr>
             </tbody>
         </table>
+    </article>
+    <article>
+        <h2>HTML Media Elements Practice</h2>
+        <img src="http://picsum.photos/400/400" alt="first image link"/>
+        <img src="html_lab_image.jpg" alt="second img link" height="400" width="400" />
+        <video controls width="250">
+            <source src="/assests/flower.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        <audio controls src="/assets/t-rex-roar.mp3">
+            Your browser does not support the <code>audio</code>element.
+        </audio>
+
     </article>
 
 </body>
