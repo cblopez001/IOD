@@ -12,24 +12,53 @@ article {
 #style-me2 {
     color: blue;
 }
-
+#style-me2.style-me1{
+    color:purple ;
+}
 
 /* Put styles for questions 2.1 and 2.2 here */
-.box{
-    background-color: azure;
-    margin: 20px 0;
-    padding: 20px;
-    width: 50px;
-    height: 200px;
+.my-descendants-are-styled p{
+    background-color: red;
+}
+.my-children-are-styled p{
+    background-color: lightgreen;
 }
 
 /* II. Box model and common properties */
 /* Put styles for questions 1-8 here */
-
+.box{
+    background-color: azure;
+    margin: 20px 0;
+    padding: 50px;
+    width: 50%;
+    height: 100px !important;
+    border: 10px solid;
+    border-color: rgb(82, 145, 226);
+    border-style:ridge;
+    box-sizing: border-box;
+    overflow:auto;
+    outline: 10px;
+    border-radius: 10px;
+}
 
 /* III. Positioning */
 /* Put styles for questions 1-3 here */
-
+.position-absolute{
+    position: absolute;
+    top: 0%;
+    background-color: aquamarine;
+    left: 55%;
+    right:15%;
+}
+.position-relative{
+    position: relative;
+    background-color: coral;
+}
+.position-sticky{
+    position: sticky;
+    background-color: chartreuse;
+    top:5px;
+}
 
 /* IV. Styling text */
 /* Put styles for questions 1-10 here */
@@ -37,6 +66,20 @@ article {
 
 /* V. Styling links */
 /* Put styles for questions 1-3 here */
+a, a:link{
+    color:lightseagreen;
+    font-size: 15px;
+    font-weight: lighter;
+    text-decoration: underline;
+}
+a:hover, a:active, a:focus{
+    color: darkblue !important;
+    text-decoration:wavy ;
+}
+a:visited{
+    color:hotpink;
+    font-style: italic;
+}
 
 
 /* VI. calc() */
