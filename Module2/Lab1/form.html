@@ -1,4 +1,58 @@
-<form method="POST" action="https://127.0.0.1:5500/form">
-    <input type="hidden" name=">First Name</input>
-    <input type="hidden" name=">Last Name</input>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="IOD Module 2 Lab 1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="author" content="Cherakye Lopez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Practice</title>
+</head>
+<body>
+    <nav>
+        <a href="/Module2/Lab1/index.html">Home</a>
+        <a href="">Form</a>
+    </nav>
+    <br>
+    <form action="http://127.0.0.1:550/form" method="POST">
+        <div>
+            <label for="firstname">FIRST NAME
+                <input  name="firstname" id="firstname" value="First Name">
+            </label>
+        </div>
+        <div>
+            <label for="lastname">LAST NAME
+                <input name="lastname" id="lastname" value="Last Name">
+            </label>
+        </div>
+        <div>
+            <input type="radio" id="html" name="coding_lang" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="coding_lang" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="coding_lang" value="JavaScript">
+            <label for="javascript">JavaScript</label><br>
+        </div>
+        <div>
+            <p>Choose the model of your vehicle</p>
+            <input type="checkbox" name="toyota" id="toyota" value="toyota">
+            <label for="toyota">Tacoma</label><br>
+            <input type="checkbox" name="honda" id="honda" value="honda">
+            <label for="honda">Civic</label><br>
+            <input type="checkbox" name="ford" id="ford" value="ford">
+            <label for="ford">Maverick</label><br>
+        </div>
+        <div>
+            <p>Choose the make of your vehicle</p>
+            <select name="make" id="make">
+                <option value="toyota">Toyota</option>
+                <option value="honda">Honda</option>
+                <option value="ford">Ford</option>
+            </select>
+        </div><br>
+        <div>
+            <button type="submit">Submit Form</button>
+        </div>
+    </form>
+</body>
+</html>
