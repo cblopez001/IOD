@@ -37,8 +37,13 @@ article {
     border-style:ridge;
     box-sizing: border-box;
     overflow:auto;
-    outline: 10px;
+    outline: 3px;
     border-radius: 10px;
+    background-image:url(/Module2/Lab2/assets-zipped/assets/images/img1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 /* III. Positioning */
