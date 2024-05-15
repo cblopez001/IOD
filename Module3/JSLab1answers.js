@@ -142,10 +142,31 @@ console.log(cat2);
 
 // Module 3_Lab 1 Question 10
 
-function Person(name, age) {
-    this.name = name;
-    this.age = age;
-    this.human = true;
-    }
-
-    
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.human = true;
+        this.canDrive=()=>{
+            return Boolean(age >= 16);
+        };
+        this.driver= this.canDrive();
+        }
+        
+        const person= new Person('Cherakye', 30);
+        const person2= new Person('Nelson', 28)
+        console.log(person, person2);
+        
+        class PersonClass{
+            constructor(name,age){
+                this.name=name,
+                this.age=age,
+                this.human=true,
+                this.driver=this.canDrive(this.age);
+            }
+            canDrive(){
+                return Boolean(this.age >= 16);
+            }
+        }
+        
+        const person3= new PersonClass('Javier', 62)
+        console.log(person3)
