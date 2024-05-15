@@ -51,7 +51,48 @@ console.log(animals);
 
 // Module 3_Lab 2 Question 6
 
+const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'red', 'blue', 'yellow']
+const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
+
+Array.prototype.unique = function(){
+    return Array.from(new Set(this));
+  }
+
+
 // Module 3_Lab 2 Question 7
+const books = [
+  { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 },
+  { id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960 },
+  { id: 3, title: '1984', author: 'George Orwell', year: 1949 },
+  { id: 4, title: 'Brave New World', author: 'Aldous Huxley', year: 1932 },
+  { id: 5, title: 'The Catcher in the Rye', author: 'J.D. Salinger', year: 1951 },
+  ];
+  
+  let bookId=4;
+  
+  
+  function getBookTitle(bookId){
+  let title = books.find(item => item.id ==bookId);
+  console.log (title.title);
+  }
+  
+  getBookTitle(bookId); 
+  
+  function getOldBooks(){
+  let bookYear = books.filter(item => item.year < 1950);
+  console.log (bookYear);
+  }
+  
+  getOldBooks();
+  
+  function addGenre(){
+  let genre = books.map(item => item.genre="classics");
+  console.log (books);
+  }
+  
+  addGenre();
+
+
 
 // Module 3_Lab 2 Question 8
 
