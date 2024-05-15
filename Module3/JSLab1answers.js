@@ -118,5 +118,34 @@ const sydney = {
     }
 
 // Module 3_Lab 1 Question 9
+let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
+let dog1 = 'Bingo';
+let cat1 = { name: 'Fluffy', breed: 'Siberian' };
+
+console.log(teamSports);
+console.log(dog1);
+console.log(cat1);
+
+let moreSports = teamSports
+teamSports.push('Soccer','Rugby'),
+teamSports.unshift('Surfing','Quidditch')
+console.log(moreSports);
+
+let dog2=dog1.replace('Bingo','Fido');
+console.log(dog2);
+
+let cat2=cat1.name.replace('Fluffy','Misty');
+console.log(cat2);
+
+// the original variable values are the because all of the changes were made in the new variables. Essentially, the new variables are using the old variables as a base to re-assign the new information.
+
 
 // Module 3_Lab 1 Question 10
+
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.human = true;
+    }
+
+    

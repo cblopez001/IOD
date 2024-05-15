@@ -48,7 +48,20 @@ console.log(animals);
 
 // Module 3_Lab 2 Question 4
 
+console.log(camelCase('margin-left')) // marginLeft
+console.log(camelCase('background-image')) // backgroundImage
+console.log(camelCase('display')) // display
+
 // Module 3_Lab 2 Question 5
+let twentyCents = 0.20
+let tenCents = 0.10
+console.log(`${twentyCents} + ${tenCents} = ${twentyCents + tenCents}`)
+// 0.2 + 0.1 = 0.30000000000000004
+
+let fixedTwenty = twentyCents.toFixed(2);
+let fixedTen = tenCents.toFixed(2);
+console.log(fixedTwenty + fixedTen) //why is this not working?
+
 
 // Module 3_Lab 2 Question 6
 
