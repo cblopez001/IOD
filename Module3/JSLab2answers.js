@@ -9,6 +9,8 @@ const capLetters= function (sentence){
 }
 
 console.log(capLetters("new york"));
+console.log(capLetters("los angeles"));
+console.log(capLetters("new delhi"));
 
 // Module 3_Lab 2 Question 2
 //Part A
@@ -70,7 +72,6 @@ const books = [
   
   let bookId=4;
   
-  
   function getBookTitle(bookId){
   let title = books.find(item => item.id ==bookId);
   console.log (title.title);
@@ -95,6 +96,21 @@ const books = [
 
 
 // Module 3_Lab 2 Question 8
+const phoneBookABC = new Map() //an empty map to begin with
+phoneBookABC.set('Annabelle', '0412312343')
+phoneBookABC.set('Barry', '0433221117')
+phoneBookABC.set('Caroline', '0455221182')
+phoneBookABC.set('Caroline', '1112224536')
+console.log(phoneBookABC);
+
+
+const phoneBookDEF = new Map()
+phoneBookDEF.set('Deryshelle', '3439874651')
+phoneBookDEF.set('Emily', '03498461384')
+phoneBookDEF.set('Frederick', '0437528736')
+
+console.log(phoneBookDEF);
+
 
 // Module 3_Lab 2 Question 9
 

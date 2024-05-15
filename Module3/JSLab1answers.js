@@ -68,6 +68,32 @@ const foulCount={
 
 // Module 3_Lab 1 Question 8
 
+const sydney = {
+    name: 'Sydney',
+    population: 5_121_000,
+    state: 'NSW',
+    founded: '26 January 1788',
+    timezone: 'Australia/Sydney'
+    }
+    
+    const houston = {
+        name: 'Houston',
+        population: 2_326_000,
+        state: 'TX',
+        founded: '1929',
+        timezone: 'America/Houston'
+        }
+    for (let key in sydney) {
+        console.log(`${key}: ${sydney[key]}`);
+    }
+    
+    for (let key in houston) {
+        console.log(`${key}: ${houston[key]}`);
+    }
+    function get(key) {
+        return [key];
+    }
+
 // Module 3_Lab 1 Question 9
 
 // Module 3_Lab 1 Question 10
