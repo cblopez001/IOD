@@ -48,7 +48,6 @@ console.log(animals);
 
 // Module 3_Lab 2 Question 4
 
-
 // Module 3_Lab 2 Question 5
 
 // Module 3_Lab 2 Question 6
@@ -111,6 +110,22 @@ phoneBookDEF.set('Frederick', '0437528736')
 
 console.log(phoneBookDEF);
 
+
+function printPhoneBook(phoneBookABC, phoneBookDEF) { 
+  let combinedMap = new Map([...phoneBookABC]); 
+
+  phoneBookDEF.forEach((value, key) => { 
+      if (combinedMap.has(key)) { 
+          combinedMap.set(key, combinedMap.get(key) + value); 
+      } else { 
+          combinedMap.set(key, value); 
+      } 
+  }); 
+
+  return combinedMap; 
+} 
+
+console.log(printPhoneBook(phoneBookABC, phoneBookDEF));
 
 // Module 3_Lab 2 Question 9
 
