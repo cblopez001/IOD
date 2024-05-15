@@ -23,15 +23,29 @@ function truncate(str, max) {
     return truncated;
   }
   
-console.log(truncate("I really do not understand Javascript and this is making my head hurt just thinking about turning it in",37))
+console.log(truncate("JavaScript is killing me!",13))
 //PART B
 const truncateV2= (str, num) => str.length > num ? `${str.substring(0, num)}...` : str;
 
-console.log(truncateV2("I really do not understand Javascript and this is making my head hurt just thinking about turning it in",45));
+console.log(truncateV2("JavaScript is killing me!",13));
 
 // Module 3_Lab 2 Question 3
 
+const animals = ['Tiger', 'Giraffe'];
+
+animals.push('Dog','Cat');
+animals.unshift("Ferret","Bat");
+animals.sort();
+
+function replaceMiddleAnimal(newValue){
+animals.splice(3,1,newValue);
+}
+
+replaceMiddleAnimal("Goat");
+console.log(animals);
+
 // Module 3_Lab 2 Question 4
+
 
 // Module 3_Lab 2 Question 5
 
