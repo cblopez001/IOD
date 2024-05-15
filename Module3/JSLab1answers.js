@@ -1,32 +1,51 @@
 // Module 3_Lab 1 Question 1 ---answers are on READ ME file ---
 
-"" + 1 + 0
-"" - 1 + 0
-true + false
-!true
-6 / "3"
-"2" * "3"
-4 + 5 + "px"
-"$" + 4 + 5
-"4" - 2
-"4px" - 2
-" -9 " + 5
-" -9 " - 5
-null + 1
-undefined + 1
-undefined == null
-undefined === null
-" \t \n" - 2
-
 // Module 3_Lab 1 Question 2 ---answers are on READ ME file ---
 
 // Module 3_Lab 1 Question 3 ---answers are on READ ME file ---
 
 // Module 3_Lab 1 Question 4
 
+let a=6
+let b=6
+let result= `${a} + ${b}` + " is";
+
+function getPhrase(){
+    return (a+b < 10)? result += ' Less than  10' : result += " Greater than 10"; 
+}
+
+console.log(getPhrase());
+
 // Module 3_Lab 1 Question 5
 
+let name= "Cherakye"
+getGreeting=()=> "Hello " + name + " !";
+console.log(getGreeting());
+
 // Module 3_Lab 1 Question 6
+
+const westley = {
+    name: 'Westley',
+    numFingers: 5
+    }
+    const rugen = {
+    name: 'Count Rugen',
+    numFingers: 6
+    }
+    const inigo = {
+    firstName: 'Inigo',
+    lastName: 'Montoya',
+    greeting(person) {
+    let greeting = `Hello ${person.name}, my name is ${this.firstName} ${this.lastName}. `;
+    console.log(greeting + this.getCatchPhrase(person));
+    },
+    getCatchPhrase(person){
+    return (person.numFingers === 6) ? 'You killed my Father. Prepare to Die!':'Nice to meet you.';
+    }
+    }
+
+    inigo.greeting(westley)
+    inigo.greeting(rugen)
 
 // Module 3_Lab 1 Question 7
 
@@ -34,37 +53,41 @@ const basketballGame = {
     score: 0,
     freeThrow() {
     this.score++;
-    return this.score;
+    return this;
     },
     basket() {
     this.score += 2;
-    return this.score;
+    return this;
     },
     threePointer() {
     this.score += 3;
-    return this.score;
+    return this;
     },
     halfTime() {
     console.log('Halftime score is '+this.score);
     },
     finalScore(){
-        console.log('Final Score is'+this.score);
+        console.log('Final score is '+this.score);
     }
-    }    
+    }
+    //modify each of the above object methods to enable function chaining as below:
+    basketballGame.basket().freeThrow().freeThrow().basket().threePointer().basket().threePointer().finalScore();
 
 const foulCount={
     foul:0,
-    foulCall(){
-        this.foul++;
-        return this.foul;
+    foulCall() {
+    this.foul++;
+    return this;
     },
-    halftimeFoul(){
-        console.log('Foul Count is'+ this.foul);
+    halfTime(){
+    console.log('The number of fouls is '+this.foul);
     },
     finalFouls(){
-        console.log('Final Foul count is'+ this.foul);
+    console.log('Final number of fouls is '+this.foul);
     }
-}
+    }
+        
+    foulCount.foulCall().foulCall().foulCall().foulCall().halfTime().foulCall().foulCall().foulCall().finalFouls();
 
 // Module 3_Lab 1 Question 8
 
