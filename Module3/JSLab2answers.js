@@ -106,7 +106,7 @@ const books = [
   addGenre();
 
   function getBookTitles(authorInitial){
-    const findAuthor = books.filter(((author)) => author.startsWith(authorInitial));
+    const findAuthor = books.filter((author) => author.startsWith(authorInitial));
     const bookTitles = findAuthor.map(book => book.title);
     return bookTitles;
   }
@@ -200,7 +200,7 @@ console.log (today.getMinutes() + ' minutes have passed so far today');
 console.log (today.getSeconds() + ' seconds have passed so far today');
 
 
-let dob = new Date(1994,22,04);
+let dob = new Date(1994,22,4);
 
     function calcDate(today,dob) {
         let diff = Math.floor(today.getTime() - dob.getTime());
