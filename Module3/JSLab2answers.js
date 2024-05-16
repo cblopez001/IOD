@@ -105,6 +105,26 @@ const books = [
   
   addGenre();
 
+  function getBookTitles(authorInitial){
+    const findAuthor = books.filter(((author)) => author.startsWith(authorInitial));
+    const bookTitles = findAuthor.map(book => book.title);
+    return bookTitles;
+  }
+  
+  console.log(getBookTitles('J'));
+
+  function latestBook(){
+    const bookYear=[];
+    let newBook=0;
+    books.forEach(book => bookYear.push(book.year));
+    bookYear.find((year) => {
+      if (year > newBook){
+        newBook=year;
+      }
+    })
+    return newBook;
+  }
+
 
 
 // Module 3_Lab 2 Question 8
@@ -175,4 +195,21 @@ console.log('Top Earner: ${topEarner(salaries)}');
 const today = new Date();
 console.log ("Current time is " + today.toLocaleTimeString());
 
-console.log (today.getHours() + 'hours have passed so far today');
+console.log (today.getHours() + ' hours have passed so far today');
+console.log (today.getMinutes() + ' minutes have passed so far today');
+console.log (today.getSeconds() + ' seconds have passed so far today');
+
+
+let dob = new Date(1994,22,04);
+
+    function calcDate(today,dob) {
+        let diff = Math.floor(today.getTime() - dob.getTime());
+        let day = 1000 * 60 * 60 * 24;
+
+        let days = Math.floor(diff/day);
+        let months = Math.floor(days/31);
+        let years = Math.floor(months/12);
+       console.log('I am '+ years +' years,'+ months + ' months and '+ days + " old.");
+        }
+        
+        calcDate(today,dob);
