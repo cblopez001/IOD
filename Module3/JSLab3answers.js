@@ -25,7 +25,6 @@ function makeCounter(startFrom=0, increments=0) {
     setTimeout(delayMsg, 20, '#2: Delayed by 20ms');
     setTimeout(delayMsg, 0, '#3: Delayed by 0ms');
     delayMsg('#4: Not delayed at all');
-    clearTimeout(setTimeout(delayMsg,15000));
 
 // Module 3_Lab 3 Question 3
 
