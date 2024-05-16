@@ -1,9 +1,27 @@
 // Module 3_Lab 1 Question 1 ---answers are on READ ME file ---
+console.log("" + 1 + 0);
+console.log("" - 1 + 0);
+console.log(true + false);
+console.log(!true);
+console.log(6 / "3");
+console.log("2" * "3");
+console.log(4 + 5 + "px");
+console.log("$" + 4 + 5);
+console.log("4" - 2);
+console.log("4px" - 2);
+console.log(" -9 " + 5);
+console.log(" -9 " - 5);
+console.log(null + 1);
+console.log(undefined + 1);
+console.log(undefined == null);
+console.log(undefined === null);
+console.log(" \t \n" - 2);
 
 // Module 3_Lab 1 Question 2 ---answers are on READ ME file ---
 let three = "3"
 let four = "4"
 let thirty = "30"
+
 //what is the value of the following expressions?
 let addition = three + four
 let multiplication = three * four
@@ -20,6 +38,11 @@ console.log(lessThan1);
 console.log(lessThan2);
 
 // Module 3_Lab 1 Question 3 ---answers are on READ ME file ---
+if (0) console.log('#1 zero is true')
+    if ("0") console.log('#2 zero is true')
+    if (null) console.log('null is true')
+    if (-1) console.log('negative is true')
+    if (1) console.log('positive is true')
 
 // Module 3_Lab 1 Question 4
 
