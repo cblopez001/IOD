@@ -31,6 +31,20 @@
         <div class="card-body" >
         <div class="card-title" ></div>
         <div class="card-text" ></div>
+        <div class="card.display">
+            <img src="" alt="">
+        </div>
+    </div>
+    </div>
+</template >
+
+<template id="portfolio-template" >
+    <div class="portfolio">
+        <div class="portfolio-body" >
+            <div class="portfolio-title" ></div>
+            <div class="portfolio-text" ></div>
+            <img class="portfolio-image" src="" alt="">
+        </div>
     </div>
     </div>
 </template >
@@ -38,27 +52,25 @@
 
 <script >
     //part one 
-    
-    const data = [
-    [{name: 'bob', age: 23}, 
-     {name: 'alice', age: 39}]
-            ]
-
-
     function addCard(array) {
         array.forEach(element=> {
     const template = document.getElementById("card-template").content.cloneNode(true);
-    template.querySelector('.card-title').innerText =title;
-    template.querySelector('.card-text').innerText = content;
+    template.querySelector('.card-title').innerText =element.name;
+    template.querySelector('.card-text').innerText = element.age;
     document.querySelector('#card-list').appendChild(template);
         })
     }
 
-    addCard("Cherakye",30);
+    const data = 
+    [{name: 'bob', age: 23}, 
+     {name: 'alice', age: 39}]
+     data.push({name:'Cherakye', age:30})
 
+    addCard(data);
+    
     //part b
 
-    const artist = [
+    const artists = [
        { name: "Van Gogh", portfolio:[
         {title: "Portrait", url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image"},
         {title: "Sky", url:"https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg" },
@@ -76,30 +88,27 @@
             }
                 ]
 
-function artistCard(artist) {
-        const artistContent = document.createElement("div");
-        const art = document.createElement("h3");
-        artistContent.appendChild(art);
+function addArtist(name="my card", portfolio=[{title: null,url:null}]) {
+    const template = document.getElementById("card-template").content.cloneNode(true);
+    template.querySelector('.card-title').innerText =name;
 
- 
-        const subtitle = document.createElement("h4");
-        subtitle.innerText = "Portfolio:";
-        artistContent.appendChild(subtitle);
-
-        
-        artist.portfolio.forEach((item) => {
-            const img = document.createElement("img");
-            img.src = item.url;
-            img.alt = item.title;
-            img.style.width = "25%";
-            img.style.marginTop = "10px";
-            artistContent.appendChild(img);
-        });
-
-        addCard(artist.name, artistContent);
+    portfolio.forEach((painting) =>{
+        const itemTemp = document.getElementById('portfolio-template').cloneNode(true);
+        itemTemp.appendChild(document.createElement("img"));
+        itemTemp.querySelector('portfolio-image').src=painting.url
+        itemTemp.querySelector('portfolio-image').alt=`${name} ${painting.title}`
+        //itemTemp.createElement('h5').innerText=title
+    })
+    ;
+   // template.querySelector('.card-text').innerText = element.portfolio.title;
+    document.querySelector('#card-list').appendChild(template);
         }
+    
+    artists.forEach(artist=>{
+        addArtist(artist.name, artist.portfolio)
+    }
+  );
 
-artist.forEach(addArtistCard);
 </script>
 </body>
 </html>
