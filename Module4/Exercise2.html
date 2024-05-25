@@ -43,18 +43,18 @@
 
     const artist = [
        { name: "Van Gogh", portfolio:[
-        {title: "portrait", url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image"},
-        {title: "sky", url:"https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg" },
+        {title: "Portrait", url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image"},
+        {title: "Sky", url:"https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg" },
         ]
             },
-        { name: "Van Gogh", portfolio:[
-        {title: "portrait", url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image"},
-        {title: "sky", url:"https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg" },
+        { name: "Claude Monet", portfolio:[
+        {title: "Water Lilies", url:"https://mymodernmet.com/wp/wp-content/uploads/2023/11/christies-monet-water-lillies-1.jpg" },
+        {title: "The truth of Nature", url:"https://mymodernmet.com/wp/wp-content/uploads/2019/10/claude-monet-the-truth-of-nature-1.jpg" },
         ]
             },
-        {name: "Van Gogh", portfolio:[
-        {title: "portrait", url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image"},
-        {title: "sky", url:"https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg" },
+        {name: "Robert S. Duncanson", portfolio:[
+        {title: "Landscape with Rainbow", url:"https://mymodernmet.com/wp/wp-content/uploads/2021/01/robert-s-duncanson-landscape-with-rainbow-1.jpg" },
+        {title: "Waterfall on Mont-Morency", url:"https://ids.si.edu/ids/deliveryService?id=SAAM-1983.95.161_1&max=2600" },
         ]
             }
                 ]
@@ -68,19 +68,6 @@
     document.querySelector('#card-list').appendChild(template);
         })
     }
-
-    
-    try {
-    axios.get("https://jsonplaceholder.typicode.com/posts?_limits=3")
-    .then((response) => {console.log(response)
-    response.data.forEach(element => {
-      //  addCard(element.title, element.body)
-      console.log(element)
-    })}
-    catch(error){
-        console.log("error in Fetching data"+ error.message)
-    }
-    
 
     addCard();
     addCard();

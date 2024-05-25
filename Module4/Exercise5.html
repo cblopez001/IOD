@@ -25,31 +25,65 @@
     </style>
 </head>
 <body>
-<!--Template Outline for Lab 2-->
-<template id="card-template" >
-<div class="card">
-<div class="card-body" >
-<div class="card-title" ></div>
-<div class="card-text" ></div>
-</div>
-</div>
-</template >
-<div id="card-list" ></div>
+    <h1>Latest News</h1>
+    <div id="container" class="row">
+    <div class="card text-center mb-3" style="width: 50rem">
+        <div class="card-body">
+          <h5 class="card-title">Election Results</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+      <div class="card text-center mb-3" style="width: 50rem">
+        <div class="card-body">
+          <h5 class="card-title">Sporting Success</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+      <div class="card text-center mb-3" style="width: 50rem">
+        <div class="card-body">
+          <h5 class="card-title">Tornado Warning</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-secondary" style="margin: 15px;">Stop Reloading</button>
+    <div id="form-container">
+    <form style="background-color: rgba(120, 163, 219, 0.806); width: 35%; padding:10px;">
+        <div class="mb-3" style="padding:12px;">
+          <label class="form-title">News Item Title:</label>
+          <input type="form-text" class="form-input" id="news-item-title" style="display: flex;
+          width: 50rem;">
+          <div id="-title" class="form-title">
+        </div>
+        <div class="mb-3" style="padding:12px;">
+          <label class="form-title">News Item Content:</label>
+          <input type="form-text" class="form-input" id="new-item-input" style="display: flex;
+          width: 50rem;">
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin: 15px;">Add News Item</button>
+      </form>
+    </div>
 
 <script >
-    function addCard(title, text,url) {
+    function addCard(array) {
+        array.forEach(element=> {
     const template = document.getElementById("card-template").content.cloneNode(true);
     template.querySelector('.card-title').innerText =title;
     template.querySelector('.card-text').innerText = content;
     document.querySelector('#card-list').appendChild(template);
+        })
     }
+
+
     try {
     axios.get("https://jsonplaceholder.typicode.com/posts?_limits=3")
     .then((response) => {console.log(response)
     response.data.forEach(element => {
       //  addCard(element.title, element.body)
       console.log(element)
-    })}
+    })})
+}
     catch(error){
         console.log("error in Fetching data"+ error.message)
     }
