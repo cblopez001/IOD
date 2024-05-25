@@ -27,19 +27,36 @@
 <body>
 <!--Template Outline for Lab 2-->
 <template id="card-template" >
-<div class="card">
-<div class="card-body" >
-<div class="card-title" ></div>
-<div class="card-text" ></div>
-</div>
-</div>
+    <div class="card">
+        <div class="card-body" >
+        <div class="card-title" ></div>
+        <div class="card-text" ></div>
+    </div>
+    </div>
 </template >
 <div id="card-list" ></div>
 
 <script >
+    //part one 
+    
     const data = [
-    [{name: 'bob', age: 23}, {name: 'alice', age: 39}]
+    [{name: 'bob', age: 23}, 
+     {name: 'alice', age: 39}]
             ]
+
+
+    function addCard(array) {
+        array.forEach(element=> {
+    const template = document.getElementById("card-template").content.cloneNode(true);
+    template.querySelector('.card-title').innerText =title;
+    template.querySelector('.card-text').innerText = content;
+    document.querySelector('#card-list').appendChild(template);
+        })
+    }
+
+    addCard("Cherakye",30);
+
+    //part b
 
     const artist = [
        { name: "Van Gogh", portfolio:[
@@ -59,18 +76,30 @@
             }
                 ]
 
+function artistCard(artist) {
+        const artistContent = document.createElement("div");
+        const art = document.createElement("h3");
+        artistContent.appendChild(art);
 
-    function addCard(array) {
-        array.forEach(element=> {
-    const template = document.getElementById("card-template").content.cloneNode(true);
-    template.querySelector('.card-title').innerText =title;
-    template.querySelector('.card-text').innerText = content;
-    document.querySelector('#card-list').appendChild(template);
-        })
-    }
+ 
+        const subtitle = document.createElement("h4");
+        subtitle.innerText = "Portfolio:";
+        artistContent.appendChild(subtitle);
 
-    addCard();
-    addCard();
+        
+        artist.portfolio.forEach((item) => {
+            const img = document.createElement("img");
+            img.src = item.url;
+            img.alt = item.title;
+            img.style.width = "25%";
+            img.style.marginTop = "10px";
+            artistContent.appendChild(img);
+        });
+
+        addCard(artist.name, artistContent);
+        }
+
+artist.forEach(addArtistCard);
 </script>
 </body>
 </html>
