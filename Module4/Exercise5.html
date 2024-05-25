@@ -66,15 +66,55 @@
     </div>
 
 <script >
-    function addCard(array) {
-        array.forEach(element=> {
-    const template = document.getElementById("card-template").content.cloneNode(true);
-    template.querySelector('.card-title').innerText =title;
-    template.querySelector('.card-text').innerText = content;
-    document.querySelector('#card-list').appendChild(template);
-        })
+
+    let news=[
+        {
+            title: "Election Results",
+            content: "With supporting text below as a natural lead-in to additional content."
+        },
+        {
+            title: "Sporting Success",
+            content: "With supporting text below as a natural lead-in to additional content."
+        },
+        {
+            title: "Tornado Warning",
+            content: "With supporting text below as a natural lead-in to additional content."
+        }
+    ]
+
+    function printNews(array) {
+        for (let i=0; i < array.length; i++) {
+
+            let title = array[i].title
+            let content = array[i].content
+            const template = document.getElementById("card-template").content.cloneNode(true);
+            template.querySelector('.card-title').innerText =title;
+            template.querySelector('.card-text').innerText = content;
+            document.querySelector('#card-list').appendChild(template);
+        }
     }
 
+    printNews(news);
+
+    function checkNews(array){
+        for (let i=0; i < array.length; i++) {
+            let title = document.querySelector(".card")
+            if (title[i] ===array[i]) {
+                console.log("up to date");
+            }
+            else {
+                document.removeChild('.cards');
+            }
+        }
+        return printNews(array);
+    }
+
+    setInterval(checkNews, 5000);
+
+    function NewsObject(title, content) {
+        this.title = title;
+        this.content = content;
+    }
 
     try {
     axios.get("https://jsonplaceholder.typicode.com/posts?_limits=3")
