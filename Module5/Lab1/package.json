@@ -1,0 +1,19 @@
+{
+  "name": "lab1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server1": "nodemon server1.js",
+    "server2": "nodemon server2.js"
+  },
+  "keywords": [],
+  "author": "cherakye lopez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
