@@ -1,10 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+// src/index.jsx
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import './styles/calculator.css'; // Import your global CSS styles here (if needed)
+
+ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-)
+  document.getElementById('root')
+);
