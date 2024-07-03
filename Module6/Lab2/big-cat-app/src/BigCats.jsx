@@ -1,4 +1,4 @@
-// src/BigCats.js
+// src/BigCats.jsx
 
 import React from 'react';
 import SingleCat from './SingleCat';

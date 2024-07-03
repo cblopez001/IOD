@@ -1,8 +1,8 @@
-// src/App.js
+// src/App.jsx
 
 import React from 'react';
-import BigCats from './BigCats';
-import './styles.css';
+import BigCats from './BigCats'; // Import your main component
+import './styles.css'; // Import your CSS file for styling
 
 function App() {
   return (
