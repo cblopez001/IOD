@@ -23,6 +23,7 @@ function BitcoinRates() {
         };
 
         fetchBitcoinPrice();
+
         return () => {
             setPrice(null);
         };
@@ -55,5 +56,3 @@ function BitcoinRates() {
 }
 
 export default BitcoinRates;
-
-
