@@ -1,13 +1,10 @@
 // src/Emoji.jsx
 
-import React, { useState } from 'react';
+import React from 'react';
+import { useEmoji } from './EmojiContext';
 
 const Emoji = () => {
-  const [isHappy, setIsHappy] = useState(true);
-
-  const toggleMood = () => {
-    setIsHappy(prevIsHappy => !prevIsHappy);
-  };
+  const { isHappy, toggleMood } = useEmoji();
 
   return (
     <div className="emoji-container">
