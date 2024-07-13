@@ -1,0 +1,26 @@
+/* BitcoinRates.css */
+
+.BitcoinRates {
+    padding: 20px;
+}
+
+.BitcoinRates h3 {
+    margin-bottom: 10px;
+}
+
+.BitcoinRates label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.BitcoinRates select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.BitcoinRates p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
