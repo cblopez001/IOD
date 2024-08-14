@@ -1,6 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const weatherRoutes = require('./routes/weatherRoutes');
+const artRoutes = require('./routes/artRoutes');
 
 dotenv.config(); // Load environment variables from .env file
 
@@ -8,8 +8,8 @@ const app = express();
 
 app.use(express.json()); // Middleware to parse JSON bodies
 
-// Integrate weather routes into the application
-app.use('/api', weatherRoutes);
+// Integrate art routes into the application
+app.use('/api', artRoutes);
 
 const PORT = process.env.PORT || 8080;
 
