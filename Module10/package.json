@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "node.js": "^0.0.1-security"
+  },
+  "name": "my-module10-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "cher lopez",
+  "license": "ISC",
+  "description": "simple docker image test app"
+}
