@@ -1,0 +1,54 @@
+# .github/workflows/ci-cd-pipeline.yml
+
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+  docker:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.cherlopez}}
+          password: ${{ secrets.dockertoken} 
+
+      - name: Build and tag Docker image
+        run: |
+          docker build -t ${{ secrets.cherlopez}}/my-node-app:latest .
+          docker tag ${{ secrets.cherlopez}}/my-node-app:latest ${{ secrets.cherlopez}}/my-node-app:${{ github.sha }}
+
+      - name: Push Docker image
+        run: |
+          docker push ${{ secrets.cherlopez}}/my-node-app:latest
+          docker push ${{ secrets.cherlopez}}/my-node-app:${{ github.sha }}
